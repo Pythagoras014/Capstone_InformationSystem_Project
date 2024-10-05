@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Resilience System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <img src="denr-logo.png" alt="My Logo" width="80" position="left">
+            <img src="R.png" alt="My Logo" width="80" position="left">
+            <img src="dilg-logo.png" alt="My Logo" width="80" position="left">
+            <img src="pagasa.png" alt="My Logo" width="80" position="left">
+        <h1>Incident Report</h1>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Incident Management -->
+    <section id="incident">
+        <form id="incident-form">
+            <label for="title" style="color:white;">Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="description" style="color:white;">Description:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="latitude" style="color:white;">Latitude:</label>
+            <input type="number" id="latitude" step="any" required>
+
+            <label for="longitude" style="color:white;">Longitude:</label>
+            <input type="number" id="longitude" step="any" required>
+
+            <label for="severity" style="color:white;">Severity:</label>
+            <select id="severity">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Report Incident</button>
+        </form>
+    </section>
+
+    <!-- GIS Map -->
+    <section id="map-section">
+        <h2 style="color:white;">GEOGRAPHIC INFORMATION SYSTEM (GIS MAP)</h2>
+        <div id="map" style="height: 500px;"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+<footer>
+         <center>
+            <p style="color:white;">&copy; 2024 Informatics college. All rights reserved.</p>
+            <img src="php.png" alt="My Logo" width="50" position="">
+            <img src="php2.png" alt="My Logo" width="50" position="">
+            <img src="info.png" alt="My Logo" width="50" position="">
+         </center>   
+    </footer>
+</html>

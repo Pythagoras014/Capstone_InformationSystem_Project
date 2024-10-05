@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Relief Donation</title>
+    <link rel="stylesheet" href="index-donation.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Help Us Make a Difference</h1>
+            <p>Your donation can save lives in times of crisis. Together, we can rebuild.</p>
+            <a href="#donation-section" class="cta-button">Donate Now</a>
+        </div>
+    </header>
+
+    <!-- Progress Section -->
+    <section class="progress-section">
+        <h2>Goal: ₱100,000</h2>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <p id="progress-text">₱50,000 raised so far!</p>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation-section" class="donation-section">
+        <h2>Choose Your Donation</h2>
+        <div class="donation-tiers">
+            <button onclick="updateProgress(2500)">Donate ₱100</button>
+            <button onclick="updateProgress(5000)">Donate ₱500</button>
+            <button onclick="updateProgress(10000)">Donate ₱1000</button>
+            <input type="number" placeholder="Custom Amount" id="custom-donation" min="5">
+            <button onclick="customDonation()">Donate Custom Amount</button>
+        </div>
+    </section>
+
+    <!-- Real-Time Updates Section -->
+    <section class="updates-section">
+        <h2>Your Donations in Action</h2>
+        <div class="updates">
+            <div class="update">
+                <img src="d.jpg" alt="Update Image">
+                <p>Volunteers distributing food to those in need.</p>
+            </div>
+            <div class="update">
+                <img src="d2.jpg" alt="Update Image">
+                <p>Medical supplies being delivered to affected areas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Trust Us Section -->
+    <section class="trust-section">
+        <h2>Why Trust Us</h2>
+        <ul>
+            <li>Partnered with leading global relief organizations</li>
+            <li>Transparent use of donations with regular updates</li>
+            <li>Top-rated by charity evaluators</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <footer>
+        <img src="php.png" alt="My Logo" width="80" position="">
+         <img src="php2.png" alt="My Logo" width="80" position="">
+         <img src="info.png" alt="My Logo" width="80" position="">
+
+         <p>&copy; 2024 Informatics college. All rights reserved.</p>
+     </footer>
+    </footer>
+
+    <script src="index-donation.js"></script>
+</body>
+</html>

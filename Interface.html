@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<background img-src="background.jpg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone project</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <img src="informatics.png" alt="My Logo" width="150" position="left">
+        <ul>
+        <br>
+    <li><a href="index-weather-update.htmL">FORECAST</a></li>
+    <li><a href="index-donation.html">DONATION</a></li>
+    <li><a href="index-flood.html">FLOOD</a></li>
+    <li><a href="#projects">LGU</a></li>
+    </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="overlay"></div>
+        <div class="home-content">
+            <img src="denr-logo.png" alt="My Logo" width="100" position="left">
+            <img src="R.png" alt="My Logo" width="100" position="left">
+            <img src="dilg-logo.png" alt="My Logo" width="100" position="left">
+            <img src="pagasa.png" alt="My Logo" width="100" position="left">
+            <h1>Local Disaster Resilience</h1>
+           <a href="index-report.html">
+     <button style="font-size: 15px; background-color: darkcyan; border-radius: 20px;">INCIDENT REPORT</button>
+        </a>
+           <br>
+           <br>
+        <a href="index-chat.html">
+     <button style="font-size: 15px; background-color: darkcyan; border-radius: 20px;">CHAT FOR RESPONDS</button>
+        </a>
+           <br>
+           <br>
+            <p><h3></h3></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+       
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines Real-Time Weather Update</title>
+    <style>
+         {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .weather-container {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 120px;
+            border-radius: 110px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 2000px;
+            border-width: 100px;
+        }
+        h1 {
+            font-size: 80px;
+            color: white;
+        }
+        .weather-container .temp {
+            font-size: 80px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: white;
+        }
+        .weather-container .description {
+            text-transform: capitalize;
+            color: white;
+            font-size: 40px;
+        }
+        .weather-container .updated {
+            margin-top: 10px;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+
+    <div class="weather-container">
+        <h1 id="city">Loading...</h1>
+        <div class="temp" id="temperature">--°C</div>
+        <div class="description" id="description">--</div>
+        <div class="updated" id="lastUpdated">Last updated: --</div>
+    </div>
+
+    <script>
+        const apiKey = 'f1f3a54f62f15410b588177ea60542ad';  // Replace with your OpenWeatherMap API key
+        const city = 'Manila';  // Set the default city to Manila (or any other city in the Philippines)
+
+        // Function to fetch weather data
+        function fetchWeather() {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},PH&units=metric&appid=${apiKey}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.cod === 200) {
+                        const temp = Math.round(data.main.temp);
+                        const description = data.weather[0].description;
+                        const cityName = data.name;
+                        const date = new Date();
+
+                        document.getElementById('city').textContent = cityName;
+                        document.getElementById('temperature').textContent = `${temp}°C`;
+                        document.getElementById('description').textContent = description;
+                        document.getElementById('lastUpdated').textContent = `Last updated: ${date.toLocaleTimeString()}`;
+                    } else {
+                        document.getElementById('city').textContent = 'City not found';
+                        document.getElementById('temperature').textContent = '--°C';
+                        document.getElementById('description').textContent = '--';
+                        document.getElementById('lastUpdated').textContent = '';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('city').textContent = 'Error fetching data';
+                    document.getElementById('temperature').textContent = '--°C';
+                    document.getElementById('description').textContent = '--';
+                    document.getElementById('lastUpdated').textContent = '';
+                });
+        }
+
+        // Fetch weather data every 30 seconds (real-time update)
+        setInterval(fetchWeather, 30000);
+
+        // Initial fetch
+        fetchWeather();
+        </script>
+        </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <h2>The Humanitarian saves community during state of Calamity</h2>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="quake.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>BOHOL</h3>
+                    <p>the 2013 earthquake, which had a magnitude of 7.2, caused significant damage in Cebu, resulting in collapsed buildings, infrastructure damage, and loss of live.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="r.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>TACLOBAN</h3>
+                    <p>On November 8, 2013, causing catastrophic devastation. With wind speeds exceeding 195 mph, it led to widespread flooding, destruction of homes, and significant loss of life</p>
+                </div>
+            </div>
+            <!-- Add more projects here -->
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <ul>
+           <br>
+           <br>
+
+           <section id="about1" class="section about-section1">
+        <div class="content">
+            <a href="https://www.region12.dilg.gov.ph/programs-projects/operation-listo">
+            <h2>OPERATION LISTO</h2></a>
+            <h3><p>is a strategic initiative designed to enhance disaster preparedness and response capabilities within communities. By focusing on training, resource allocation, and community engagement, Operation Listo empowers individuals and organizations to effectively prepare for, respond to, and recover from disasters.</p></h3>
+        </div>
+        <img src="listo.png" alt="Your photo" class="profile-pic">
+    </section>
+
+        </form>
+    </section>
+
+    <footer>
+        <img src="php.png" alt="My Logo" width="80" position="">
+         <img src="php2.png" alt="My Logo" width="80" position="">
+         <img src="info.png" alt="My Logo" width="80" position="">
+
+         <p>&copy; 2024 Informatics college. All rights reserved.</p>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url('https://via.placeholder.com/1200x600');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(bd-donation.jpg);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: blueviolet;
+}
+
+/* Progress Section */
+.progress-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.progress-bar {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 30px;
+    background-color: turquoise;
+    width: 50%; /* This will change dynamically */
+}
+
+/* Donation Section */
+.donation-section {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.donation-tiers {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.donation-tiers button, .donation-tiers input {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.donation-tiers button {
+    background-color: teal;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.donation-tiers button:hover {
+    background-color: blueviolet;
+}
+
+.donation-tiers input {
+    width: 150px;
+}
+
+/* Updates Section */
+.updates-section {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.updates {
+    display: flex;
+    justify-content: center;
+}
+
+.update {
+    margin: 10px;
+    text-align: center;
+}
+
+.update img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.update p {
+    margin-top: 10px;
+}
+
+/* Trust Section */
+.trust-section {
+    padding: 30px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.trust-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trust-section li {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}

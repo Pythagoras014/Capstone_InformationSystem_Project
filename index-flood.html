@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines Flood Information</title>
+    <link rel="stylesheet" href="index-flood.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="informatics.png" alt="My Logo" width="150" position="left">
+        <div class="logo">Flood Watch PH</div>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Flood Information in the Philippines</h1>
+            <div class="region-select">
+                <label for="region">Select Region:</label>
+                <select id="region">
+                    <option value="Luzon">Luzon</option>
+                    <option value="Visayas">Visayas</option>
+                    <option value="Mindanao">Mindanao</option>
+                </select>
+                <button id="get-flood-watch">Get Flood Watch List</button>
+            </div>
+
+            <div id="flood-info">
+                <h2>Flood Watch Alerts</h2>
+                <ul id="flood-list"></ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="php.png" alt="My Logo" width="80" position="">
+         <img src="php2.png" alt="My Logo" width="80" position="">
+         <img src="info.png" alt="My Logo" width="80" position="">
+
+         <p>&copy; 2024 Informatics college. All rights reserved.</p>
+        
+    </footer>
+
+    <script src="index-flood.js"></script>
+</body>
+</html>
